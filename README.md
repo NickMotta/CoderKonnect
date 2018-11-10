@@ -1,0 +1,2 @@
+# CoderKonnect
+This project was created for Boston Hacks 2018. When you visit a hackathon, the biggest central idea is to find a team, and work on a project. However, the process of finding a project for you to work on can be difficult. CoderKonnect aims to simplify the process of finding projects to work on. It will automatically match developers to projects based on pre-configured criterias such as preferred language and category of project.
