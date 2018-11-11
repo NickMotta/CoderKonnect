@@ -25,7 +25,9 @@
 
 
 	//Gets the current hashed password from the database
-	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'")->fetch_object->d_passhash;
+	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
+	$res2 = $res2->fetch_object()->d_passhash;
+
 	echo "res2: " . $res2 . "<br><br>";
 	echo "pwd: " . $pwd . "<br><br>";
 
