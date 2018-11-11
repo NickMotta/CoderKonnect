@@ -7,7 +7,7 @@
 	$password = dbescape(trim($_POST["password"]));
 	$confpass = dbescape(trim($_POST["confpass"]));
 
-	echo "<script>console.log($firstName)</script>"
+	echo "<script>console.log($firstName)</script>";
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
