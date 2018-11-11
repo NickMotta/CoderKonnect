@@ -7,6 +7,14 @@
 	$password = dbescape(trim($_POST["password"]));
 	$confpass = dbescape(trim($_POST["confpass"]));
 
+
+	//scaffoldig for debugging
+$firstName = "Nicholas";
+$lastName = "Motta";
+$email = "titties@sprinkles.com";
+$password = "test123";
+$confpass = "test123";
+
 	echo "$firstName<br>$lastName<br>$email<br>$password<br>$confpass<br>";
 
 	
