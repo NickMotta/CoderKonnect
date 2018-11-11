@@ -30,7 +30,7 @@
 	}
 	else
 	{
-        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName,d_email='$email", d_password='$password');
+        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName,d_email='$email, d_password='$password'");
 	}
 
 	if (!isset($query))

@@ -25,7 +25,7 @@ if (!isset($res))
 $passwordHashed = passhash($pwd);
 
 //Gets the current hashed password from the database
-$res = dbquery("SELECT * FROM Developers WHERE d_passhash='$passwordHashed'");
+$res = dbquery("SELECT * FROM Developer WHERE d_passhash='$passwordHashed'");
 
 //If there isn't an entry with that password
 if (!isset($res))
