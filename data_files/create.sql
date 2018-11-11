@@ -11,7 +11,7 @@ CREATE TABLE Developer
 	d_email VARCHAR(64) NOT NULL,
 	d_passhash VARCHAR(256) NOT NULL,
 	d_profileSetup BOOLEAN NOT NULL DEFAULT false,
-	p_id INTEGER NOT NULL,
+	p_id INTEGER,
 	d_languages VARCHAR(64) NOT NULL,
 	d_api VARCHAR(64) NOT NULL,
 	d_category VARCHAR(64) NOT NULL
