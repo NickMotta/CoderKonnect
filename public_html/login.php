@@ -51,7 +51,7 @@
 		$id = dbquery("SELECT * FROM Developer WHERE d_email='$email';");
 		$id = $id->fetch_object()->d_id;
 		$_SESSION['dev'] = $id;
-		setcookie("loggedIn", $res2->fetch_object()->d_id, time() + 2592000);
+		setcookie("loggedIn", $id, time() + 2592000);
 		echo "user id: " . $id . "<br><br>";
 		$query = dbquery("SELECT d_profileSetup FROM Developer WHERE d_email='$email';");
 		
