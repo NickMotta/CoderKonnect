@@ -21,9 +21,11 @@
 		die("Wrong e-mail/password!");     //error entry not found
 	}
 
+	$temp = passhash("12345");
 
-	echo "Passhash '12345': " . passhash("12345") . "<br>";
+	echo "Passhash '12345': " .$temp . "<br>";
 	echo "passhash '12345': " . passhash("12345") . "<br>";
+	echo "passtest: " . passtest("12345", $temp);
 
 
 	//Hash the passed password
