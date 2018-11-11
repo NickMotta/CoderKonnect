@@ -1,3 +1,5 @@
+USE CoderKonnect;
+
 DROP TABLE IF EXISTS Developer;
 DROP TABLE IF EXISTS Project;
 DROP TABLE IF EXISTS Languages;
