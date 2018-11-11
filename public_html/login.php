@@ -28,11 +28,12 @@
 	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
 	$res2 = $res2->fetch_object()->d_passhash;
 
+	/*
 	echo "res2: " . $res2 . "<br><br>";
 	echo "pwd: " . $pwd . "<br><br>";
 	echo "passtest: " . passtest($pwd, $res2) . "<br><br>";
 	echo "reverse passtest: " . !passtest($pwd, $res2) . "<br><br>";
-
+*/
 	//If there isn't an entry with that password
     $passmatch = passtest($pwd, $res2);
 	//Purposefully make the error message vague
