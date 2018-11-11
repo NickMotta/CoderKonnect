@@ -10,10 +10,10 @@
         <a class="navbar-brand" href="index.html">Logo</a>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Login</a>
+                <a class="nav-link text-white" href="login.html">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="/register.html">Register</a>
+                <a class="nav-link text-white" href="#">Register</a>
             </li>
         </ul>
     </nav>
@@ -23,8 +23,26 @@
             <h1 class="text-center display-3">Register</h1>
             <form action="/register.php" class="mt-5" method="post">
                 <div class="form-group">
-                    <label for=""
+                    <label for="first_name">First Name:</label>
+                    <input type="text" class="form-control" id="first_name" placeholder="First Name">
                 </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="confpass">Re-type Password:</label>
+                    <input type="password" class="form-control" id="confpass" placeholder="Password">
+                </div>
+
             </form>
         </div>
     </div>
