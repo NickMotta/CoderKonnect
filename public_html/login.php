@@ -29,7 +29,7 @@
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
-	if ($res2 !== $passwordHashed)
+	if ($res2->fetch_object()->d_passhash !== $passwordHashed)
 	{
 		die ("Wrong e-mail/password!");
 	}
