@@ -18,7 +18,7 @@ $res = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
 //If the result came up empty
 if (!isset($res))
 {
-    die("Error: No e-mail found!");     //error entry not found
+    die("Wrong e-mail/password!");     //error entry not found
 }
 
 //Hash the passed password
@@ -28,6 +28,7 @@ $passwordHashed = passhash($pwd);
 $res = dbquery("SELECT * FROM Developer WHERE d_passhash='$passwordHashed'");
 
 //If there isn't an entry with that password
+//Purposefully make the error message vague
 if (!isset($res))
 {
     die ("Wrong e-mail/password!");
@@ -36,8 +37,8 @@ else
 {
     //Password and email match. Now create a session and send the user on its way!
     session_start();
-    $_SESSION['dev'] = $res->fetch_object()->DID;
-    setcookie("loggedIn", $res->fetch_object()->DID, time() + 2592000);
+    $_SESSION['dev'] = $res->fetch_object()->d_id;
+    setcookie("loggedIn", $res->fetch_object()->d_id, time() + 2592000);
     header("Location: dashboard.html");
 }
 ?>
