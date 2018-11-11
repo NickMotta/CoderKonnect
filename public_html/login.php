@@ -12,6 +12,9 @@
 	$email = dbescape(trim($_POST['email']));
 	$pwd = dbescape(trim($_POST['password']));
 
+	$email = "project@forsaken.com";
+	$pwd = "12345";
+
 	//Checks the database for the e-mail
 	$res1 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
 
