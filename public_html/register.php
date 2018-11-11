@@ -9,15 +9,17 @@
 	
 	if(ctype_alpha($firstName) == false)
 	{
-		die("ERROR! First name must be alphanumeric!");
+		die("ERROR! First name must be only letters!");
 	}
 	if(ctype_alpha($lastName) == false)
 	{
-		die("ERROR! Last name must be alphanumeric!");
+		die("ERROR! Last name must be must by only letters!");
 	}
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
+	
+	$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
 	
 	if($passhash1 != $passhash2)
 	{
@@ -25,17 +27,16 @@
     }
     else if($query.fetch_object()->num_rows <= 0)
 	{
-		$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
 		die("ERROR! Account already exists with that email!");
 	}
 	else
 	{
-        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName,d_email='$email, d_password='$password'");
+        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName',d_email='$email', d_password='$password'");
 	}
 
 	if (!isset($query))
 	{
-		die ("ERROR! Something went wrong while trying to register a new user");
+		die ("ERROR! Something went wrong while trying to register a new user.");
 	}
 
 
