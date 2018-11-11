@@ -68,9 +68,8 @@ $confpass = "test123";
     <h1 class="display-5 text-center mb-5">Click the button below to be brought to the log-in screen.</h1>
 
     <div class="container w-50">
-        <h1 class="display-5 text-center mt-5" style="margin-bottom: 0px">Or,</h1>
-        <form action="CreateProject.html" class="">
-            <button class="btn-primary btn-block rounded btn-lg mb-3"><h1 class="display-5">Create A Project</h1></button>
+        <form action="login.html" class="">
+            <button class="btn-primary btn-block rounded btn-lg mb-3"><h1 class="display-5">Log-in</h1></button>
         </form>
     </div>
 </div>
