@@ -23,7 +23,7 @@ $confpass = "test123";
 	$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
 	
 
-    else if($query.fetch_object()->num_rows <= 0)
+	if($query.fetch_object()->num_rows <= 0)
 	{
 		die("ERROR! Account already exists with that email!");
 	}
