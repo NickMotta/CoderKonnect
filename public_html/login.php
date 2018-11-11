@@ -21,24 +21,15 @@
 		die("Wrong e-mail/password!");     //error entry not found
 	}
 
-	$temp = passhash("12345");
-
-	echo "Passhash '12345': " .$temp . "<br>";
-	echo "passhash '12345': " . passhash("12345") . "<br>";
-	echo "passtest: " . passtest("12345", $temp);
 
 
-	//Hash the passed password
-	$passwordHashed = passhash($pwd);
-	echo "Results of passwordHashed: " . $passwordHashed . "<br><br>";
 
 	//Gets the current hashed password from the database
-	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
+	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'")->fetch_object->d_passhash;
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
-    echo "Results of res2: " . $res2->fetch_object()->d_passhash . "<br><br>";
-	if ($res2->fetch_object()->d_passhash !== $passwordHashed)
+	if (!passtest($pwd, $res2))
 	{
 		die ("Wrong e-mail/password!");
 	}
