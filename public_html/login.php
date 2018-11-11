@@ -18,7 +18,7 @@
 	//If the result came up empty
 	if (!isset($res1))
 	{
-		die("Wrong e-mail/password!");     //error entry not found
+		die("entry not found");     //error entry not found
 	}
 
 
