@@ -30,10 +30,11 @@
 
 	echo "res2: " . $res2 . "<br><br>";
 	echo "pwd: " . $pwd . "<br><br>";
+	echo "passtest: " . passtest($pwd, $res2);
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
-	if (!passtest($pwd, $res2))
+	if (!(passtest($pwd, $res2)))
 	{
 		die ("Wrong e-mail/password!");
 	}
