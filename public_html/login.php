@@ -20,17 +20,11 @@
 	{
 		die("entry not found");     //error entry not found
 	}
-
-
-
-
+	
 	//Gets the current hashed password from the database
 	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
 	$res2 = $res2->fetch_object()->d_passhash;
 
-	echo "res2: " . $res2 . "<br><br>";
-	echo "pwd: " . $pwd . "<br><br>";
-	echo "passtest: " . passtest($pwd, $res2) . "<br><br>";
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
@@ -42,9 +36,11 @@
 	{
 		//Password and email match. Now create a session and send the user on its way!
 		session_start();
-		$_SESSION['dev'] = $res2->fetch_object()->d_id;
+		$id = dbquery("SELECT * FROM Developer WHERE d_email='$email';");
+		$id = $id->fetch_object()->d_id;
+		$_SESSION['dev'] = $id;
 		setcookie("loggedIn", $res2->fetch_object()->d_id, time() + 2592000);
-		
+		echo "user id: " . $id . "<br><br>";
 		$query = dbquery("SELECT d_profileSetup FROM Developer WHERE d_email='$email';");
 		
 		if(($query->fetch_object()->d_profileSetup) == false)
