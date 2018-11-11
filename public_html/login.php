@@ -34,8 +34,9 @@
 	echo "reverse passtest: " . !passtest($pwd, $res2) . "<br><br>";
 
 	//If there isn't an entry with that password
+    $passmatch = passtest($pwd, $res2);
 	//Purposefully make the error message vague
-	if (!passtest($pwd, $res2))
+	if (!$passmatch)
 	{
 		die ("Wrong e-mail/password!");
 	}
