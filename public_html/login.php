@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 /**
  * Created by PhpStorm.
  * User: Nick
@@ -40,12 +40,4 @@ else
     setcookie("loggedIn", $res->fetch_object()->DID, time() + 2592000);
     header("Location: dashboard.html");
 }
-
-
-
-=======
-	require_once "database.php";
-	
-	
->>>>>>> 36dba54c3ecc9d0a824612e8c20d1f0b7d1611c4
 ?>
