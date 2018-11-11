@@ -15,7 +15,9 @@ $email = "titties@sprinkles.com";
 $password = "test123";
 $confpass = "test123";
 
+
 	echo "$firstName<br>$lastName<br>$email<br>$password<br>$confpass<br>";
+	echo ($password == $confpass);
 
 	
 	$passhash1 = passhash($password);
@@ -23,7 +25,7 @@ $confpass = "test123";
 	
 	$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
 	
-	if($passhash1 !== $passhash2)
+	if(!($passhash1 == $passhash2))
 	{
         die("ERROR! Retype your password!");
     }
