@@ -10,7 +10,19 @@
 //connect to database.
 require_once 'database.php';
 
+echo <<<_END
+<!doctype html>
+<html>
+<body>
+
+_END;
+
 print_r($_POST[category]);
+
+echo <<<_END
+</body>
+</html>
+_END;
 
 
 
