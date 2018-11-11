@@ -10,19 +10,12 @@
 //connect to database.
 require_once 'database.php';
 
-echo <<<_END
-<!doctype html>
-<html>
-<body>
+$languages = $_POST['lang'];
+$categories = $_POST['category'];
+$API = $_POST['api'];
 
-_END;
+echo "<p>Uh-oh! Looks like we haven't finished this part! Sorry!</p>";
 
-print_r($_POST[lang]);
-
-echo <<<_END
-</body>
-</html>
-_END;
 
 
 
@@ -31,7 +24,7 @@ _END;
  * This function will generate a string representation of different integers
  * separated by a comma. It will then return that string.
  */
-function generateStringRepresentation($array)
+function generateStringRepresentation($array, $table)
 {
 
 }
