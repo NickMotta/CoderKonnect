@@ -7,7 +7,8 @@
 	$password = dbescape(trim($_POST["password"]));
 	$confpass = dbescape(trim($_POST["confpass"]));
 
-	echo "$firstName";
+	echo "$firstName<br>$lastName<br>$email<br>$password<br>$confpass<br>";
+
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
