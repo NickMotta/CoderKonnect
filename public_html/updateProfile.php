@@ -17,7 +17,7 @@ echo <<<_END
 
 _END;
 
-print_r($_POST[category]);
+print_r($_POST[lang]);
 
 echo <<<_END
 </body>
