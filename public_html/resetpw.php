@@ -9,7 +9,7 @@
 	
 	$passhash = passhash($password);
 	
-	$url = "http://142.93.204.188/CoderKonnect/public_html/verifypw.php?email=$emailAddress&password=$passhash";
+	$url = "coderkonnect.com/verifypw.php?email=$emailAddress&password=$passhash";
 	
 	mail($emailAddress, "Verification Link", $url);
 	

@@ -1,5 +1,5 @@
 <?php
-	require_once '../database.php';
+	require_once 'database.php';
 	
 	echo "<!DOCTYPE html>";
     echo "<HTML><BODY>";
