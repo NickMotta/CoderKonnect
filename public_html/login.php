@@ -25,7 +25,7 @@
 	$passwordHashed = passhash($pwd);
 
 	//Gets the current hashed password from the database
-	$res2 = dbquery("SELECT * FROM Developer WHERE d_passhash='$passwordHashed'");
+	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
