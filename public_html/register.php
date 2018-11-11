@@ -30,7 +30,7 @@ $confpass = "test123";
 	}
 	else
 	{
-        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName',d_email='$email', d_passhash='$password'");
+        $query = dbquery("INSERT INTO Developer SET d_firstName='$firstName', d_lastName='$lastName',d_email='$email', d_passhash='$passhash1'");
 	}
 
 	if (!isset($query))
