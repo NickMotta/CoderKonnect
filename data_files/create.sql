@@ -10,7 +10,7 @@ CREATE TABLE Developer
 	d_lastName VARCHAR(64) NOT NULL,
 	d_email VARCHAR(64) NOT NULL,
 	d_passhash VARCHAR(256) NOT NULL,
-	d_profileSetup BOOLEAN NOT NULL,
+	d_profileSetup BOOLEAN NOT NULL DEFAULT false,
 	p_id INTEGER NOT NULL,
 	d_languages VARCHAR(64) NOT NULL,
 	d_api VARCHAR(64) NOT NULL,
