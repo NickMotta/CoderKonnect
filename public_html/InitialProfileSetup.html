@@ -26,7 +26,7 @@
 
 <div class="container w-50 shadow-lg p4 mb-4 bg-white rounded border border-primary mt-3">
     <div class="Justify-content-center">
-        <form>
+        <form action="updateProfile.php" method="post">
             <h1 class="text-center display-3">Profile Set-Up</h1>
             <p class="text-center">You need to set up your initial profile before<br>
             we can start matching you to projects.<br></p>
@@ -36,73 +36,72 @@
                 <div class="row">
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Java</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">Java</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">C++</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">C++</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">C</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">C</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">C#</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">C#</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Python</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">Python</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Ruby</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">Ruby</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">HTML</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">HTML</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">CSS</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">CSS</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Fortran</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">Fortran</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="checkbox">
-                            <label class="checkbox-inline"><input type="checkbox" value="">php</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="lang[]" value="">php</label>
                         </div>
                     </div>
                 </div>
-
 
             <h4 class="display-5 mt-5">API:</h4>
             <p>Chooose the API's you're comfortable with.</p>
             <div class="row">
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">a</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="api[]" value="">a</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">b</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="api[]" value="">b</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">c</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="api[]" value="">c</label>
                     </div>
                 </div>
             </div>
@@ -112,37 +111,37 @@
             <div class="row">
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Robotics</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Robotics</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Web Development</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Web Development</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Web Design</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Web Design</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Mobile-Android</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Mobile-Android</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Mobile-iOS</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Mobile-iOS</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">Desktop App</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">Desktop App</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="checkbox">
-                        <label class="checkbox-inline"><input type="checkbox" value="">AI/Machine Learning</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="category[]" value="">AI/Machine Learning</label>
                     </div>
                 </div>
 
