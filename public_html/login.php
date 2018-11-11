@@ -29,7 +29,7 @@
 
 	//If there isn't an entry with that password
 	//Purposefully make the error message vague
-	if (!isset($res2))
+	if ($res2 !== $passwordHashed)
 	{
 		die ("Wrong e-mail/password!");
 	}
