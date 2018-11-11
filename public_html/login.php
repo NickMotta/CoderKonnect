@@ -40,7 +40,7 @@
 		$_SESSION['dev'] = $res2->fetch_object()->d_id;
 		setcookie("loggedIn", $res2->fetch_object()->d_id, time() + 2592000);
 		
-		$query = dbquery("SELECT * FROM Developer WHERE d_email='$email';");
+		$query = dbquery("SELECT d_profileSetup FROM Developer WHERE d_email='$email';");
 		
 		if(($query.fetch_object()->d_profileSetup) == false)
 		{
