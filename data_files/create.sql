@@ -12,7 +12,7 @@ CREATE TABLE Developer
 	d_lastName VARCHAR(64) NOT NULL,
 	d_email VARCHAR(64) NOT NULL,
 	d_passhash VARCHAR(256) NOT NULL,
-	d_profileSetup BOOLEAN NOT NULL DEFAULT false,
+	d_profileSetup BIT NOT NULL DEFAULT 0
 	p_id INTEGER,
 	d_languages VARCHAR(64),
 	d_api VARCHAR(64),
@@ -23,7 +23,7 @@ CREATE TABLE Project
 	(p_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	p_creator VARCHAR(64) NOT NULL,
 	p_members VARCHAR(64) NOT NULL,
-	p_description VARCHAR(200) NOT NULL, /* Use TEXT instead? */
+	p_description TEXT NOT NULL, /* Use TEXT instead? */
 	p_languages VARCHAR(64) NOT NULL,
 	p_api VARCHAR(64) NOT NULL,
 	p_categories VARCHAR(64) NOT NULL
