@@ -19,11 +19,12 @@ $confpass = "test123";
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
+	echo ($passhash1 == $passhash2);
 	
-	$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
+	$query = dbquery("SELECT d_email FROM Developer WHERE d_email='$email';");
 	
 
-	if($query.fetch_object()->num_rows <= 0)
+	if(!isset($query))
 	{
 		die("ERROR! Account already exists with that email!");
 	}
