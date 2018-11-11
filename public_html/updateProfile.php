@@ -24,7 +24,18 @@ echo "<p>Uh-oh! Looks like we haven't finished this part! Sorry!</p>";
  * This function will generate a string representation of different integers
  * separated by a comma. It will then return that string.
  */
-function generateStringRepresentation($array, $table)
+function generateCategoryString($array)
 {
 
+    $s = "";            //String we're going to append to
+    //Iterate through the array
+    for ($i = 0; $i < $array.count(); $i++)
+    {
+
+        //Query the database for the ID of the selected value.
+        $query = dbquery("SELECT c_id FROM Categories WHERE c_name='$array[$i]';");
+
+        s .=
+
+    }
 }
