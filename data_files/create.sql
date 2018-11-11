@@ -9,12 +9,12 @@ CREATE TABLE Developer
 	d_firstName VARCHAR(64) NOT NULL,
 	d_lastName VARCHAR(64) NOT NULL,
 	d_email VARCHAR(64) NOT NULL,
-	d_passhash VARCHAR(64) NOT NULL,
+	d_passhash VARCHAR(256) NOT NULL,
 	d_profileSetup BOOLEAN NOT NULL,
 	p_id INTEGER NOT NULL,
 	d_languages VARCHAR(64) NOT NULL,
 	d_api VARCHAR(64) NOT NULL,
-	d_category VARCHAR(64) NOT NULL,
+	d_category VARCHAR(64) NOT NULL
 	);
 
 CREATE TABLE Project
@@ -24,12 +24,12 @@ CREATE TABLE Project
 	p_description VARCHAR(200) NOT NULL, /* Use TEXT instead? */
 	p_languages VARCHAR(64) NOT NULL,
 	p_api VARCHAR(64) NOT NULL,
-	p_categories VARCHAR(64) NOT NULL,
+	p_categories VARCHAR(64) NOT NULL
 	);
 
 CREATE TABLE Languages
 	(l_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	l_name VARCHAR(64) NOT NULL,
+	l_name VARCHAR(64) NOT NULL
 	);
 
 INSERT INTO Languages SET l_name = 'C';
@@ -57,7 +57,7 @@ INSERT INTO Languages SET l_name = 'CSS';
 	
 CREATE TABLE Categories
 	(c_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	c_name VARCHAR(64) NOT NULL,
+	c_name VARCHAR(64) NOT NULL
 	);
 
 INSERT INTO Languages SET l_name = 'Web Development';
@@ -71,5 +71,5 @@ INSERT INTO Languages SET l_name = 'Computer Graphics and Visualization';
 	
 CREATE TABLE Api
 	(a_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	a_name VARCHAR(64) NOT NULL,
+	a_name VARCHAR(64) NOT NULL
 	);

@@ -1,8 +1,8 @@
 <?php
-    $dbhost = "142.93.204.188";
-    $dbuser = "m_shaikh";
-    $dbpass = "password123";
-    $dbname = $dbuser;
+    $dbhost = "localhost";
+    $dbuser = "n_motta";
+    $dbpass = "BostonHacks2018";
+    $dbname = "CoderKonnect";
 
     $dbcon = new mysqli ($dbhost, $dbuser, $dbpass, $dbname);
     if ($dbcon->connect_error) die ($dbcon->connect_error);
