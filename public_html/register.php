@@ -15,7 +15,7 @@
 	
 	$query = dbquery("SELECT d_email FROM Developer WHERE d_email=\"$email\";");
 	
-	if($passhash1 != $passhash2)
+	if($passhash1 !== $passhash2)
 	{
         die("ERROR! Retype your password!");
     }
