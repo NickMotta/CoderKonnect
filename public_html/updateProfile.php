@@ -35,7 +35,7 @@ function generateCategoryString($array)
         //Query the database for the ID of the selected value.
         $query = dbquery("SELECT c_id FROM Categories WHERE c_name='$array[$i]';");
 
-        s .=
+        //$s .= "";
 
     }
 }
