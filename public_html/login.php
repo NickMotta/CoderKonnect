@@ -23,6 +23,7 @@
 
 	//Hash the passed password
 	$passwordHashed = passhash($pwd);
+	echo "Results of passwordHashed: " . $passwordHashed . "<br><br>";
 
 	//Gets the current hashed password from the database
 	$res2 = dbquery("SELECT * FROM Developer WHERE d_email='$email'");
