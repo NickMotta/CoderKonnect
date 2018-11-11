@@ -6,16 +6,6 @@
 	$email = dbescape(trim($_POST["email"]));
 	$password = dbescape(trim($_POST["password"]));
 	$confpass = dbescape(trim($_POST["confpass"]));
-
-
-	//scaffoldig for debugging
-$firstName = "Nicholas";
-$lastName = "Motta";
-$email = "titties@sprinkles.com";
-$password = "test123";
-$confpass = "test123";
-
-
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
