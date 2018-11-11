@@ -42,7 +42,7 @@
 		
 		$query = dbquery("SELECT d_profileSetup FROM Developer WHERE d_email='$email';");
 		
-		if(($query.fetch_object()->d_profileSetup) == false)
+		if(($query->fetch_object()->d_profileSetup) == false)
 		{
 			header("Location: InitialProfileSetup.html");
 		}
