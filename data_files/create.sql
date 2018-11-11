@@ -60,14 +60,16 @@ CREATE TABLE Categories
 	c_name VARCHAR(64) NOT NULL
 	);
 
-INSERT INTO Languages SET l_name = 'Web Development';
-INSERT INTO Languages SET l_name = 'Data Science';
-INSERT INTO Languages SET l_name = 'Robotics';
-INSERT INTO Languages SET l_name = 'Computer Vision';
-INSERT INTO Languages SET l_name = 'Machine Learning and Artificial Intelligence';
-INSERT INTO Languages SET l_name = 'Software Engineering';
-INSERT INTO Languages SET l_name = 'Computer/Cyber Security';
-INSERT INTO Languages SET l_name = 'Computer Graphics and Visualization';
+INSERT INTO Categories SET c_name = 'Web Development';
+INSERT INTO Categories SET c_name = 'iOS App Development';
+INSERT INTO Categories SET c_name = 'Android App Development';
+INSERT INTO Categories SET c_name = 'Data Science';
+INSERT INTO Categories SET c_name = 'Robotics';
+INSERT INTO Categories SET c_name = 'Computer Vision';
+INSERT INTO Categories SET c_name = 'Machine Learning and Artificial Intelligence';
+INSERT INTO Categories SET c_name = 'Software Engineering';
+INSERT INTO Categories SET c_name = 'Computer/Cyber Security';
+INSERT INTO Categories SET c_name = 'Computer Graphics and Visualization';
 	
 CREATE TABLE Api
 	(a_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
