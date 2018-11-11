@@ -6,15 +6,8 @@
 	$email = dbescape(trim($_POST["email"]));
 	$password = dbescape(trim($_POST["password"]));
 	$confpass = dbescape(trim($_POST["confpass"]));
-	
-	if(!ctype_alpha($firstName))
-	{
-		die("ERROR! First name must be only letters!");
-	}
-	if(!ctype_alpha($lastName))
-	{
-		die("ERROR! Last name must be must by only letters!");
-	}
+
+	echo "<script>console.log($firstName)</script>"
 	
 	$passhash1 = passhash($password);
 	$passhash2 = passhash($confpass);
