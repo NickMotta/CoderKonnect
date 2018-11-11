@@ -17,7 +17,7 @@ $confpass = "test123";
 
 
 	echo "$firstName<br>$lastName<br>$email<br>$password<br>$confpass<br>";
-	echo ($password == $confpass);
+	echo !($password == $confpass);
 
 	
 	$passhash1 = passhash($password);
