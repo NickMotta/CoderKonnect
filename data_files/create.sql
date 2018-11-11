@@ -11,7 +11,7 @@ CREATE TABLE Developer
 	d_email VARCHAR(64) NOT NULL,
 	d_passhash VARCHAR(64) NOT NULL,
 	d_profileSetup BOOLEAN NOT NULL,
-	d_projectAffil VARCHAR(64) NOT NULL,
+	p_id INTEGER NOT NULL,
 	d_languages VARCHAR(64) NOT NULL,
 	d_api VARCHAR(64) NOT NULL,
 	d_category VARCHAR(64) NOT NULL,
@@ -19,28 +19,57 @@ CREATE TABLE Developer
 
 CREATE TABLE Project
 	(p_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	p_name VARCHAR(100) NOT NULL,
-	s_class CHAR(2) NOT NULL,
-	s_advfid INTEGER UNSIGNED NOT NULL
+	p_creator VARCHAR(64) NOT NULL,
+	p_members VARCHAR(64) NOT NULL,
+	p_description VARCHAR(200) NOT NULL, /* Use TEXT instead? */
+	p_languages VARCHAR(64) NOT NULL,
+	p_api VARCHAR(64) NOT NULL,
+	p_categories VARCHAR(64) NOT NULL,
 	);
 
 CREATE TABLE Languages
-	(s_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	s_name VARCHAR(100) NOT NULL,
-	s_class CHAR(2) NOT NULL,
-	s_advfid INTEGER UNSIGNED NOT NULL
+	(l_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	l_name VARCHAR(64) NOT NULL,
 	);
+
+INSERT INTO Languages SET l_name = 'C';
+INSERT INTO Languages SET l_name = 'C++';
+INSERT INTO Languages SET l_name = 'C#';
+INSERT INTO Languages SET l_name = 'Java';
+INSERT INTO Languages SET l_name = 'Python';
+INSERT INTO Languages SET l_name = 'Javascript';
+INSERT INTO Languages SET l_name = 'Kotlin';
+INSERT INTO Languages SET l_name = 'Scala';
+INSERT INTO Languages SET l_name = 'Swift';
+INSERT INTO Languages SET l_name = 'Objective-C';
+INSERT INTO Languages SET l_name = 'PHP';
+INSERT INTO Languages SET l_name = 'Ruby';
+INSERT INTO Languages SET l_name = 'Go';
+INSERT INTO Languages SET l_name = 'Rust';
+INSERT INTO Languages SET l_name = 'Haskell';
+INSERT INTO Languages SET l_name = 'Ada';
+INSERT INTO Languages SET l_name = 'Pascal';
+INSERT INTO Languages SET l_name = 'Lua';
+INSERT INTO Languages SET l_name = 'Perl';
+INSERT INTO Languages SET l_name = 'HTML';
+INSERT INTO Languages SET l_name = 'Elixir';
+INSERT INTO Languages SET l_name = 'CSS';
 	
 CREATE TABLE Categories
-	(s_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	s_name VARCHAR(100) NOT NULL,
-	s_class CHAR(2) NOT NULL,
-	s_advfid INTEGER UNSIGNED NOT NULL
+	(c_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	c_name VARCHAR(64) NOT NULL,
 	);
+
+INSERT INTO Languages SET l_name = 'Web Development';
+INSERT INTO Languages SET l_name = 'Data Science';
+INSERT INTO Languages SET l_name = 'Robotics';
+INSERT INTO Languages SET l_name = 'Computer Vision';
+INSERT INTO Languages SET l_name = 'Machine Learning and Artificial Intelligence';
+INSERT INTO Languages SET l_name = 'Software Engineering';
+INSERT INTO Languages SET l_name = 'Computer/Cyber Security';
+INSERT INTO Languages SET l_name = 'Computer Graphics and Visualization';
 	
 CREATE TABLE Api
-	(s_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	s_name VARCHAR(100) NOT NULL,
-	s_class CHAR(2) NOT NULL,
-	s_advfid INTEGER UNSIGNED NOT NULL
+	(a_id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	a_name VARCHAR(64) NOT NULL,
 	);
